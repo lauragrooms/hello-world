@@ -1,0 +1,56 @@
+<html>
+<title>Contact Page</title>
+    <head> 
+        <link rel="stylesheet" type="text/css" href="mainstyle.css">
+        <link rel="stylesheet" type="text/css" href="./bootstrap-4.3.1-dist/css/bootstrap.min.css">
+        <script src="bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
+    
+    </head>
+    <body> 
+        <h3 class="classone">Contact Us</h3>
+        <h5>Accept terms of agreement?</h5>
+    <select id=agree>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+    </select>
+<p></p>
+    <head>
+    <script>
+        function getData()
+        {
+            var name = document.getElementById("txtName").value;
+            if(name==""){
+                document.getElementById("txtName").style.backgroundColor="red";
+                document.getElementById("txtName").focus();
+            }
+            var phone = document.getElementById("txtPhone").value;
+            if(phone==""){
+                document.getElementById("txtPhone").style.backgroundColor="red";
+                document.getElementById("txtPhone").focus();
+            }
+            var agree = document.getElementById("agree").value;
+            if(agree=="no"){
+                window.alert("Please Agree!!!!!!!");
+            }
+        }
+    </script>
+    </head>
+    <table>
+        <tr>
+            <td>Name</td>
+            <td><input type="text" id="txtName"> </td>
+        </tr>
+        <tr>
+            <td>Phone Number</td>
+            <td><input type="text" id="txtPhone"> </td>
+        </tr>
+        <tr>
+            <td colspan="2"><button id="btnSubmit" onClick="getData();">Submit</button></td>
+        </tr>
+    </table>
+    <div id="finalResult"></div>
+</body>
+    <a href="firstpage.html">Go to Home Page</a>
+    <p></p>
+    <a href="forthpage.html">Math Game!</a>
+</html>
