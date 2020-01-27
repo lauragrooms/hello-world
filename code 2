@@ -1,0 +1,75 @@
+var x = 113;
+var diameter = 75;
+var speed = 3;
+let theCircle,theCircle2;
+let theSquare;
+
+function setup() 
+{
+  createCanvas(400, 400);
+  theCircle = new myCircle(100,200,45,57, 170, 212);
+  theCircle2 = new myCircle(150,250,75,23,149,10);
+  theCircle3 = new myCircle(240,120,55,236,49,130);
+  theSquare = new mySquare(224,250,90,235, 160, 47);
+}
+
+function draw() 
+{
+  background(235, 64, 52);
+  theCircle.display();
+  theCircle2.display();
+  theCircle3.display();
+  theSquare.display();
+  theCircle.move();
+}
+
+class myCircle 
+{
+
+  constructor(x,y,diameter,red,green,blue)
+  {
+    this.x = x;
+    this.y = y;
+    this.diameter = diameter;
+    this.red = red;
+    this.green = green;
+    this.blue = blue;
+    this.speed = 10;
+  }
+  
+  move()
+  {
+    this.x++;
+  }
+  
+  display()
+  {
+     fill(this.red,this.green,this.blue);
+     circle(this.x,this.y, this.diameter); 
+  }
+
+}
+
+class mySquare 
+{
+
+  constructor(x,y,side,red,green,blue)
+  {
+    this.x = x;
+    this.y = y;
+    this.side = side;
+    this.red = red;
+    this.green = green;
+    this.blue = blue;
+  }
+  
+  display()
+  {
+     fill(this.red,this.green,this.blue);
+     square(this.x,this.y, this.side); 
+  }
+  
+
+  
+  
+}
